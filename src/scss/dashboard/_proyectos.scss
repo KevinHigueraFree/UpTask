@@ -1,0 +1,79 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+
+.no-proyectos {
+    a {
+        color: v.$indigo;
+        // @include m.boton(v.$indigo, v.$blanco);
+        //background-color: v.$indigo;
+    }
+}
+
+.listado-proyectos {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    @include m.grid(1, 2rem);
+
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+
+    @include m.desktop {
+        @include m.grid(3, 2rem);
+
+    }
+
+    .proyectos {
+        background-color: lighten(v.$indigo, 5%);
+        min-height: 12rem;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding: 2rem;
+        line-height: 2rem;
+        border-radius: 4rem 0.5rem;
+        transition-property: background-color;
+        transition-duration: 300ms;
+
+        &:hover {
+            background-color: darken(v.$indigo, 5%);
+        }
+
+.eliminar-proyecto{
+    margin-top: -1.5rem;
+    margin-right: -1.5rem;
+}
+        .boton-eliminar-proyecto {
+            background-color: lighten(v.$rojo, 10%);
+            color: v.$blanco;
+            padding: 0.2rem;
+            font-weight: 1000;
+            font-size: 2.3rem;
+            border-radius: 4rem;
+            cursor: pointer;
+&:hover{
+    background-color: lighten(v.$rojo, 2%);
+}
+        }
+
+
+        a {
+            color: v.$blanco;
+        }
+
+        .cerrar-menu {
+            display: flex;
+            justify-content: center;
+            height: 2rem;
+            width: 2rem;
+
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
