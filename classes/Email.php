@@ -27,10 +27,10 @@ class Email
         $mail->Password = $_ENV['EMAIL_PASS'];
 
         $mail->setFrom('higuerak047@gmail.com');
-        $mail->addAddress('higuerak047@gmail.com');
+        $mail->addAddress('higuerak047@gmail.com','UpTask');
         $mail->Subject = 'Confirma tu cuenta';
 
-        $mail->isHTML(TRUE);
+        $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
@@ -59,7 +59,7 @@ class Email
         $mail->addAddress('higuerak047@gmail.com');
         $mail->Subject = 'Reestablecer Password';
 
-        $mail->isHTML(TRUE);
+        $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
